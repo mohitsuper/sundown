@@ -4,10 +4,10 @@
 // },false)
 
 
-const scroll = new LocomotiveScroll({
-    el: document.querySelector('#app'),
-    smooth: true
-});
+// const scroll = new LocomotiveScroll({
+//     el: document.querySelector('#app'),
+//     smooth: true
+// });
 
 
 
@@ -19,17 +19,6 @@ const scroll = new LocomotiveScroll({
 // }
 // lodaerAnimetion()
 
-function navOpen(){
-    let openMenu = document.querySelector("#menu")
-    let Navbar = document.querySelector("#nav-part-2")
-    let close = document.querySelector("#close")
-    openMenu.addEventListener("click",()=>{
-        Navbar.style.right = "-10px"
-    })
-    close.addEventListener("click",()=>{
-        Navbar.style.right = "-100%"
-    })
-}
 
 function imageAnimation(){
     let elem = document.querySelectorAll(".elem")
@@ -99,7 +88,22 @@ function videoAnimation() {
 function menuAnimation(){
     let NavOverlay = document.querySelector("#Navoverlay")
     let NavMenu = document.querySelector("#menu")
-    NavMenu.
+    let Navopen = document.querySelector("#nav-part-2")
+    let flag = false
+    NavMenu.addEventListener("click",()=>{
+        if(!flag){
+            NavOverlay.style.top = "0"
+            Navopen.style.top ="0"
+            flag=true
+            NavMenu.innerHTML = "&times; close";
+        }
+        else{
+            flag = false
+            NavMenu.innerHTML = "&#9778; menu";
+            Navopen.style.top ="-100rem"
+            NavOverlay.style.top = "-100%"
+        }
+    })
 }
 
 // function swiperAnimation() {
@@ -167,6 +171,5 @@ document.addEventListener('DOMContentLoaded', function () {
 // swiperAnimation();
 imageAnimation();
 videoAnimation();
-navOpen()
 menuAnimation();
 loaderAnimation();
