@@ -11,13 +11,13 @@
 
 
 
-// function lodaerAnimetion(){
-//     const loader = document.querySelector('#loader-animation')
-//     setTimeout(()=>{
-//         loader.style.top = "-100%"
-//     },4200)
-// }
-// lodaerAnimetion()
+function lodaerAnimetion(){
+    const loader = document.querySelector('#loader-animation')
+    setTimeout(()=>{
+        loader.style.top = "-100%"
+    },4200)
+}
+lodaerAnimetion()
 
 
 function imageAnimation(){
