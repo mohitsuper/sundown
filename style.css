@@ -41,7 +41,7 @@ body{
 #main{
     overflow-x: hidden;
     position: relative;
-    z-index: 10;
+    z-index: 9;
 }
 
 
@@ -60,7 +60,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    top:100%;
+    top:-100%;
     transition: 0.5s ease all;
     height: 100vh;
     width: 100%;
@@ -187,8 +187,8 @@ nav .menu{
 }
 
 .contant2{
-    font-size: 10vw;
-    line-height: 9vw;
+    font-size: 7vw;
+    line-height:7vw;
     font-weight: 600;
     text-align: right;
 }
@@ -196,17 +196,17 @@ nav .menu{
 #animation{
     position: relative;
     right: -2vw;
-    min-height: 10vh;
+    min-height: 3vh;
 }
 #animation .anime1{
     position: absolute;
-    height: 30vw;
-    width: 45vw;
+    height: 45vw;
+    width: 60vw;
     top: -5vw;
     right: 0;
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
-    filter: blur(20px);
+    filter: blur(10px);
     /* background: #E6352D; */
     background-color: red;
 }
@@ -214,12 +214,12 @@ nav .menu{
 
  .anime2{
     position: absolute;
-    height: 30vw;
-    width: 30vw;
+    height: 45vw;
+    width: 45vw;
     top: -10vw;
     border-radius:50%;
     right:-10vw;
-    filter: blur(30px);
+    filter: blur(20px);
 
     background-color: blue;
     background: linear-gradient(to left,hwb(14 5% 10%),#e6260d);
@@ -249,7 +249,7 @@ nav .menu{
 
 
 #page2{
-    min-height: 100vh;
+    height: 100vh;
     width: 100%;
     background: #efeae3;
     /* padding: 0vw 2vw; */
@@ -291,7 +291,7 @@ nav .menu{
 
 
 #about{
-    height: 80vh;
+    min-height: 80vh;
     width: 100%;
 }
 
@@ -371,12 +371,13 @@ nav .menu{
     padding: 2vw 0;
     background: #efeae3;
     width: 100%;
-    min-height: 80vh;
+    min-height: 130vh;
     
     
 }
 
-#elem-container{
+#page3 #elem-container{
+    height: 100%;
     transition: ease all 0.5s;
 }
 
@@ -407,7 +408,7 @@ nav .menu{
 .elem .overlay{
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 1;
     top: -200px;
     transition: ease all 0.3s;
     left: 0;    
@@ -433,6 +434,8 @@ nav .menu{
 
 .elem h2{
     font-size: 3vw;
+    position: relative;
+    z-index: 3;
     padding: 0 2vw;
 }
 
@@ -454,6 +457,7 @@ nav .menu{
 }
 
 .fixed-image img{
+    transition: ease all 3s;
     position: relative;
     width: 100%;
     z-index: 10;
@@ -477,6 +481,7 @@ nav .menu{
 }
 
 .fixed-video video{
+    transition: ease all 3s;
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -504,7 +509,7 @@ nav .menu{
 #page4{
     position: relative;
     padding: 5vw 3vw;
-    min-height: 100vh;
+    height: 100vh;
     background: #efeae3;
 
 }
@@ -552,13 +557,13 @@ nav .menu{
 
  .left-content .left-titles::after{
     content: "";
-    top:45%;
+    top:42%;
     border-radius: 20px;
     height: 35%;
     width: 1px;
     background: #efeae359;
     position: absolute;
-    left: 150px;
+    left: 20.2%;
 }
 
 
@@ -629,14 +634,12 @@ nav .menu{
 
 #swiper-comment .container .Item{
     padding: 3vw 3vw;
-    /* border-left: 1px solid rgba(0, 0, 0, 0.235); */
     border-right: 1px solid rgba(0, 0, 0, 0.235);
-
 
 }
 
 #swiper-comment .container .Item img{
-    width: 70%;
+    width: 100%;
     padding-bottom: 2vw;
 }
 
@@ -669,6 +672,8 @@ footer{
 footer .animtion{
     width: 100%;
     z-index: -1;
+    padding: 0;
+    margin: 0;
     min-height: 2vw;
     top:-10%;
     left: 0;
@@ -680,7 +685,8 @@ footer .animtion{
 footer .animtion .anime{
     height: 25vw;
     width: 32vw;
-    background:rgba(255, 0, 0, 0.486);
+    transform:scale(2);
+    background:rgba(255, 0, 0, 0.774);
     
 }
 
@@ -744,6 +750,12 @@ footer .container{
     color: white;
     font-size: 2vw;
     
+}
+
+#form{
+    z-index: 20;
+    position: relative;
+
 }
 
 #form label h4{
@@ -841,7 +853,7 @@ footer h1{
 
     #nav-part-2 h4{
         padding: 0;
-        font-size: 10vw;
+        font-size: 15vw;
         font-weight: 600;
         color: #222;
         border: none;
@@ -861,11 +873,14 @@ footer h1{
 
     #Hero .contant2{
         width: 100%;
+        font-size: 16vw;
+        line-height: 23vw;
+    
     }
     #Hero .contant1{
     width: 100%;
-    font-size: 7vw;
-    line-height:7vw;
+    font-size:6vw;
+    line-height: 6vw;
      align-items: flex-start;
     }
 
@@ -882,30 +897,123 @@ footer h1{
         padding: 5vw 0;
     }
 
+    #page2{
+        height: 70vh;
+    }
     #about .container-1{
         flex-direction: column;
-        gap: 4vw;
+        width: 100%;
+        z-index:5;
+        height: fit-content;
+        gap:2vw;
+        position: relative;
+        align-items: flex-start;
     }
 
     #about .container-1 h1{
         width: 100%;
+        font-size: 6vw;
+        line-height: 8vw;
+        height: fit-content;
     }
     #about .container-2 {
-        align-items: flex-end;
         display: flex;
         flex-direction: column;
-        width: 100%;
-    }
-    #about .container-2 img{
-        width: 50%;
+        width: 70%;
     }
     #about .container-2 p{
-        width: 50%;
         font-size: 4vw;
+        
     }
     .page3-bottom{
-        flex-direction: column-reverse;
+        height:60vh;
+        flex-direction: column;
     }
+    .page3-bottom .right{
+        border-radius: 20px;
+    }
+
+    #page4{
+        height: 70vh;
+    }
+    .left-content{
+        position: relative;
+        padding: 10vw;
+    }
+    .left-content h1{
+      font-size: 5vw;
+      line-height: 5vw;
+      color: #efeae3a1;
+    }
+    .left .tab p{
+        font-size: 4vw;
+    }
+    .left-content .left-titles::after{
+        content: "";
+        border-radius: 20px;
+        height: 40%;
+        width: 1px;
+        background: #efeae359;
+        position: absolute;
+    }
+    
+    
+     .active::before{
+        content: "";
+        border-radius: 20px;
+        z-index: 2;
+        /* top:45%; */
+        width: 1px;
+        background:red;
+        position: absolute;
+    }
+
+
+    
+    
+    .tab-contents{
+        display: none;
+        transition: ease all 0.5s;
+    }
+    
+    .active-tab{
+        transition: ease all 0.5s;
+        display: block;
+        padding:11vw;
+        padding-top: 0vw;
+        font-weight: 300;
+        color: #efeae3;
+        font-size: 1.3vw;
+    }
+    
+    
+    
+     .left-content .left-titles::after{
+        content: "";
+        top:45%;
+        border-radius: 20px;
+        height: 35%;
+        width: 1px;
+        background: #efeae359;
+        position: absolute;
+        left: 150px;
+    }
+    
+    
+     .active::before{
+        content: "";
+        border-radius: 20px;
+        height: 50px;
+        z-index: 2;
+        /* top:45%; */
+        width: 1px;
+        background:red;
+        position: absolute;
+        left: 150px;
+    }
+    
+
+
 
 
 
@@ -920,6 +1028,142 @@ footer h1{
     font-size: 3vw;
 }
 
+#loader-animation h1{
+    font-size: 11vw;
+}
+
+#moving-gola{
+    position: absolute; 
+   top: 13%; 
+   left: 28%;  
+   z-index: -1;
+}
+#moving-gola .gola-1{
+    position: absolute; 
+    height: 70vw;
+    width: 70vw;
+    border-radius: 50%;
+    filter: blur(20px);
+    background: #e6520d;
+
+}
+
+#moving-gola .gola-2{
+    position: absolute; 
+    height: 70vw;
+    width: 70vw;
+    top: 80px; 
+   left: 0px;
+    border-radius: 50%;
+    filter: blur(20px);
+    background:linear-gradient(to right, #ec291f,#e6520d);
+    animation: moving-gola alternate infinite 3s;
+}
+
+@keyframes moving-gola {
+    0%{
+        transform: translate(-5%,5%) skewY(0) ;
+        
+    }
+    100%{
+        transform: translate(5%,-5%) skewY(10deg);
+    }
+
+}
+
+
+.elem h2{
+  font-size: 5vw;
+}
+
+#page3 #elem-container{
+    min-height: 120vh;
+}
+
+#page3 #elem-container .elem{
+    height: 70vh;
+    background-position: center;
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    margin: 3vw 2vw;
+    border-radius: 20px;
+}
+#page3 #elem-container .overlay{
+    display: none;
+    #page3{
+        padding: 2vw 0vw;
+        min-height: 120vh;
+    }
+}
+.elem:nth-child(2){
+    background-image: url('https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b1733_Nike_HOI_50th_SU22_FL1_5388-p-800.webp');
+
+}
+
+.elem:nth-child(3){
+    background-image: url('/asstes/img/image6.webp');
+
+}
+
+.elem:nth-child(1){
+    background-image: url("/asstes/img/image5.webp");
+}
+.elem:nth-child(4){
+    background-image: url('https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b16f4_Copy%2520of%2520Nike_Soho_50th_SU22_FL1_6176-p-800.webp');
+}
+.elem:nth-child(5){
+    background-image: url('https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b16c5_Copy%2520of%2520Nike_Soho_AMD21_0781_LORES-p-800.webp');
+
+}
+.elem:nth-child(6){
+        
+    background-image: url('/asstes/img/image6.webp');
+}
+
+
+.elem:nth-child(7){
+    background-image: url('https://plus.unsplash.com/premium_photo-1721742730852-166caeac3544?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+.elem:nth-child(8){
+    background-image: url("https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b163b_Copy-of-IMG_1180-p-800.webp");
+}
+
+
+.traspraent{
+    z-index: 2;
+    position: relative;
+    height: 30vh;
+}
+footer{
+   height: 30vh; 
+}
+footer .container .footer-links a{
+   font-size: 5vw;
+}
+
+#form label h4{
+  font-size: 3.5vw;
+}
+
+footer h1{
+    font-size: 20vw;
+}
+footer .bottom-footer h5{
+    font-size: 2.8vw;
+    display: flex;
+    align-items: center;
+}
+
+footer .bottom-footer h5 img{
+    width: 20%;
+}
+
+footer .animtion .anime{
+    background: red;
+}
 
 
 }

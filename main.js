@@ -33,12 +33,15 @@ function imageAnimation(){
     })
 
     
-
     elem.forEach((item) => {
+        let img_data = item.getAttribute("data-image")
+        // if(window.innerWidth <= "640px"){
+        //      item.style.backgroundImage = `url(${img_data})`
+        // }
+
             item.addEventListener("mouseenter",()=>{
             let img_data = item.getAttribute("data-image")
             let DataType = item.getAttribute("data-type")
-            console.log(img_data)
             let image = document.createElement("img")
             image.setAttribute("src",img_data)
             fixedImage.innerHTML = '';
@@ -65,7 +68,6 @@ function videoAnimation() {
 
     elem.forEach((item) => {
         item.addEventListener("mouseenter",()=>{
-            console.log(item)
             let source = item.getAttribute("data-image")
             let DataType = item.getAttribute("data-type")
             
@@ -106,70 +108,56 @@ function menuAnimation(){
     })
 }
 
-// function swiperAnimation() {
-//     var swiper = new Swiper(".mySwiper", {
-//         slidesPerView: "auto",
-//         centeredSlides: true,
-//         spaceBetween: 100,
-//     });
-// }
-
-function loaderAnimation() {
-    var loader = document.querySelector(".loader");
-    setTimeout(function () {
-        loader.style.top = "-100%";
-    }, 4200);
-}
 
 
 
-var tablinks = document.getElementsByClassName("left-titles");
-var tabcontents = document.getElementsByClassName("tab-contents");
-var imgtab = document.getElementsByClassName("img-content");
 
-// var activeElement = document.querySelector(".active::after")
+    var tablinks = document.getElementsByClassName("left-titles");
+   var tabcontents = document.getElementsByClassName("tab-contents");
+    var imgtab = document.getElementsByClassName("img-content");
 
-// activeElement.style.top = '10px'; 
-function opentab(tabname) {
-    for (tablink of tablinks) {
-        tablink.classList.remove("active");
-    }
-    for (tabcontent of tabcontents) {
-        tabcontent.classList.remove("active-tab");
-    }
-    for (imgcontents of imgtab) {
-        imgcontents.classList.remove("active-img");
-    }
-
-    var clickedTab = document.getElementById(tabname);
-    var index = Array.from(tabcontents).indexOf(clickedTab);
-
-    tablinks[index].classList.add("active");
-    tabcontents[index].classList.add("active-tab");
-    imgtab[index].classList.add("active-img");
+    //how to define opentab function in js?
+    function opentab(tabname) {
+        for (tablink of tablinks) {
+            tablink.classList.remove("active");
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        for (imgcontents of imgtab) {
+            imgcontents.classList.remove("active-img");
+        }
+        var clickedTab = document.getElementById(tabname);
+        var index = Array.from(tabcontents).indexOf(clickedTab);
+      
+        tablinks[index].classList.add("active");
+         tabcontents[index].classList.add("active-tab");
+          imgtab[index].classList.add("active-img");
+      
+          
+          localStorage.setItem('activeImageId', tabname);
+      
+          document.addEventListener('DOMContentLoaded', function () {
+              var activeImageId = localStorage.getItem('activeImageId');
+          
+              if (activeImageId !== null) {
+                  tablinks[activeTabIndex].classList.add("active");
+                  tabcontents[activeTabIndex].classList.add("active-tab");
+                  imgtab[activeTabIndex].classList.add("active-img");
+              }
+          })
+    } 
     
 
     
-    localStorage.setItem('activeImageId', tabname);
 
-}
+
 
 // Retrieve the active tab index from localStorage on page load
-document.addEventListener('DOMContentLoaded', function () {
-    var activeImageId = localStorage.getItem('activeImageId');
-
-    if (activeImageId !== null) {
-        tablinks[activeTabIndex].classList.add("active");
-        tabcontents[activeTabIndex].classList.add("active-tab");
-        imgtab[activeTabIndex].classList.add("active-img");
-    }
-});
 
 
 
 
-// swiperAnimation();
 imageAnimation();
 videoAnimation();
 menuAnimation();
-loaderAnimation();
