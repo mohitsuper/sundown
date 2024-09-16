@@ -4,10 +4,10 @@
 // },false)
 
 
-// const scroll = new LocomotiveScroll({
-//     el: document.querySelector('#app'),
-//     smooth: true
-// });
+const scroll = new LocomotiveScroll({
+    el: document.querySelector('#app'),
+    smooth: true
+});
 
 
 
