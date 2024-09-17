@@ -17,7 +17,7 @@ function lodaerAnimetion(){
         loader.style.top = "-100%"
         if(loader.style.top=="-100%"){
             loader.style.opacity = "0";
-    
+            loader.style.display = "none";
         }    
     },4200)
 }
