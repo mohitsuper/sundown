@@ -100,6 +100,7 @@ function menuAnimation(){
         if(!flag){
             NavOverlay.style.top = "0"
             Navopen.style.top ="0"
+            Navopen.style.opacity = "0"
             flag=true
             NavMenu.innerHTML = "&times; close";
         }
