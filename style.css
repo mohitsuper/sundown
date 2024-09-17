@@ -57,10 +57,11 @@ body{
 #loader-animation{
     position: fixed;
     z-index: 20;
+    opacity: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    top:0%;
+    top:0px;
     transition: 0.5s ease all;
     height: 100vh;
     width: 100%;

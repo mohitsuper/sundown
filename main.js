@@ -15,6 +15,10 @@ function lodaerAnimetion(){
     const loader = document.querySelector('#loader-animation')
     setTimeout(()=>{
         loader.style.top = "-100%"
+        if(loader.style.top=="-100%"){
+            loader.style.opacity = "0";
+    
+        }    
     },4200)
 }
 lodaerAnimetion()
